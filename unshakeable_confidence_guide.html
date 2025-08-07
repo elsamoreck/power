@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle Any Situation with Unshakeable Confidence</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #1f2937 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid #dc2626;
+        }
+
+        .header h1 {
+            color: #1f2937;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            color: #dc2626;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            border-left: 5px solid #dc2626;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: #1f2937;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .mindset-shift {
+            background: linear-gradient(135deg, #dc2626 0%, #1f2937 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .mindset-shift h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .scenario {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .scenario h4 {
+            color: #dc2626;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .response-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .weak-response, .strong-response {
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid;
+        }
+
+        .weak-response {
+            background: #fef2f2;
+            border-left-color: #ef4444;
+        }
+
+        .strong-response {
+            background: #f0fdf4;
+            border-left-color: #22c55e;
+        }
+
+        .weak-response h5 {
+            color: #ef4444;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .strong-response h5 {
+            color: #22c55e;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .principle {
+            background: linear-gradient(135deg, #dc2626 0%, #1f2937 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .principle:hover {
+            transform: scale(1.05);
+        }
+
+        .principle h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .quote {
+            background: #1f2937;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-style: italic;
+            margin: 30px 0;
+            border: 3px solid #dc2626;
+        }
+
+        .warning {
+            background: #6b7280;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #dc2626 0%, #374151 100%);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background: white;
+            color: #dc2626;
+        }
+
+        .workshop-button {
+            display: inline-block;
+            background: white;
+            color: #dc2626;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 3px solid white;
+            margin-top: 20px;
+        }
+
+        .workshop-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+            background: #f5f5f5;
+            color: #1f2937;
+        }
+
+        @media (max-width: 768px) {
+            .response-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Unshakeable Confidence</h1>
+            <div class="subtitle">How to Handle Any Situation Like a Secure Man</div>
+            <p>Master the mindset and strategies that keep you calm, confident, and in control no matter what life throws at you.</p>
+        </div>
+
+        <div class="section">
+            <h2>The Foundation: Secure vs Insecure Mindset</h2>
+            <div class="mindset-shift">
+                <h3>Secure men don't worry about other men. They make other men worry about them.</h3>
+            </div>
+            <p>Unshakeable confidence starts with understanding that your value doesn't diminish because someone else exists. When you're secure in who you are, external situations become opportunities to demonstrate your strength, not threats to your ego.</p>
+        </div>
+
+        <div class="section">
+            <h2>Real-World Scenarios: Confident Responses</h2>
+            
+            <div class="scenario">
+                <h4>📱 Scenario: She's Texting Another Guy Frequently</h4>
+                <div class="response-grid">
+                    <div class="weak-response">
+                        <h5>❌ Insecure Response</h5>
+                        <p>"Who are you texting? Why are you always on your phone? You better not be talking to other guys!"</p>
+                        <small><em>This screams insecurity and pushes her away.</em></small>
+                    </div>
+                    <div class="strong-response">
+                        <h5>✅ Confident Response</h5>
+                        <p>Continue being your best self. If it bothers you, calmly express how you feel without accusations. Trust your instincts about whether this is normal friendship or something more.</p>
+                        <small><em>You observe without panic and trust yourself.</em></small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scenario">
+                <h4>🍻 Scenario: She Wants to Go Out with Male Friends</h4>
+                <div class="response-grid">
+                    <div class="weak-response">
+                        <h5>❌ Insecure Response</h5>
+                        <p>"You can't go! I don't trust those guys. Choose between me and them."</p>
+                        <small><em>Controlling behavior that damages trust.</em></small>
+                    </div>
+                    <div class="strong-response">
+                        <h5>✅ Confident Response</h5>
+                        <p>"Have fun! Text me when you get home safe." Focus on your own plans and trust that a quality woman will respect the relationship.</p>
+                        <small><em>Shows trust while maintaining your own life.</em></small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scenario">
+                <h4>💼 Scenario: She Mentions How Great Another Guy Is</h4>
+                <div class="response-grid">
+                    <div class="weak-response">
+                        <h5>❌ Insecure Response</h5>
+                        <p>"Why are you talking about him? Am I not good enough? Stop bringing him up!"</p>
+                        <small><em>Makes you look threatened and small.</em></small>
+                    </div>
+                    <div class="strong-response">
+                        <h5>✅ Confident Response</h5>
+                        <p>"That's cool." Then redirect to something about your own life or interests. Secure men don't feel threatened by compliments about others.</p>
+                        <small><em>Shows you're not threatened and have your own value.</em></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>The 5 Pillars of Unshakeable Confidence</h2>
+            <div class="principles">
+                <div class="principle">
+                    <h3>🎯 Know Your Worth</h3>
+                    <p>Your value isn't determined by her behavior or anyone else's opinion. Build genuine self-worth through achievement and growth.</p>
+                </div>
+                <div class="principle">
+                    <h3>🔍 Observe, Don't React</h3>
+                    <p>Confident men gather information before making decisions. React to patterns, not isolated incidents.</p>
+                </div>
+                <div class="principle">
+                    <h3>🚶‍♂️ Be Willing to Walk</h3>
+                    <p>When you're not afraid to lose something, you can't be controlled or manipulated by fear.</p>
+                </div>
+                <div class="principle">
+                    <h3>⚖️ Trust Your Instincts</h3>
+                    <p>Learn to distinguish between real red flags and insecurity-driven paranoia. Your gut usually knows.</p>
+                </div>
+                <div class="principle">
+                    <h3>🏗️ Focus on Building</h3>
+                    <p>Put energy into becoming irreplaceable rather than worrying about potential threats.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>The Confidence Framework: SECURE</h2>
+            <div style="margin: 20px 0;">
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #dc2626; font-size: 1.3rem;">S - Stay Calm</h3>
+                    <p>Don't let emotions drive your reactions. Take time to process before responding.</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #dc2626; font-size: 1.3rem;">E - Evaluate Objectively</h3>
+                    <p>Look at facts, not fears. Is this actually a problem or just your insecurity talking?</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #dc2626; font-size: 1.3rem;">C - Communicate Clearly</h3>
+                    <p>If something genuinely concerns you, address it directly without accusations or drama.</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #dc2626; font-size: 1.3rem;">U - Understand Boundaries</h3>
+                    <p>Know what you will and won't accept, and stick to those standards consistently.</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #dc2626; font-size: 1.3rem;">R - Respect Her Autonomy</h3>
+                    <p>A secure man doesn't need to control. He attracts loyalty through value, not fear.</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: #dc2626; font-size: 1.3rem;">E - Exit if Necessary</h3>
+                    <p>Be prepared to walk away if your standards aren't being met. This isn't a threat—it's self-respect.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quote">
+            "The most attractive quality a man can have is not needing anyone's validation to know his worth."
+        </div>
+
+        <div class="section">
+            <h2>Practical Confidence Strategies</h2>
+            
+            <h3 style="color: #dc2626; margin: 25px 0 15px 0;">When She Has Guy Friends:</h3>
+            <ul style="margin: 15px 0; padding-left: 20px;">
+                <li><strong>Don't interrogate:</strong> Asking "who is he?" immediately shows insecurity</li>
+                <li><strong>Don't forbid:</strong> Controlling behavior destroys attraction and trust</li>
+                <li><strong>Don't compete:</strong> You're not in a competition unless you make it one</li>
+                <li><strong>Do focus on your value:</strong> Be the man she doesn't want to lose</li>
+                <li><strong>Do trust your gut:</strong> Real red flags feel different than paranoia</li>
+            </ul>
+
+            <h3 style="color: #dc2626; margin: 25px 0 15px 0;">When She's Getting Attention from Others:</h3>
+            <ul style="margin: 15px 0; padding-left: 20px;">
+                <li><strong>Smile and be proud:</strong> You're with someone others find attractive</li>
+                <li><strong>Stay engaged with her:</strong> Don't sulk or withdraw</li>
+                <li><strong>Show social proof:</strong> Be the guy others want to be around</li>
+                <li><strong>Don't mark territory:</strong> Possessive behavior is unattractive</li>
+            </ul>
+
+            <h3 style="color: #dc2626; margin: 25px 0 15px 0;">When Facing Disrespect:</h3>
+            <ul style="margin: 15px 0; padding-left: 20px;">
+                <li><strong>Address it once:</strong> Clearly state your boundary without emotion</li>
+                <li><strong>Don't repeat yourself:</strong> If she doesn't respect it, your actions speak</li>
+                <li><strong>Follow through:</strong> Empty threats destroy your credibility</li>
+                <li><strong>Stay calm:</strong> Emotional outbursts give away your power</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Remember:</strong> Confidence isn't about being emotionless or uncaring. It's about being secure enough in yourself that you can handle any situation from a place of strength rather than fear. A woman worth keeping won't make you constantly wonder where you stand.
+        </div>
+
+        <div class="section">
+            <h2>Building Unshakeable Inner Game</h2>
+            <p><strong>Daily practices that build real confidence:</strong></p>
+            <ul style="margin: 15px 0; padding-left: 20px;">
+                <li><strong>Physical fitness:</strong> A strong body builds a strong mind</li>
+                <li><strong>Pursue mastery:</strong> Excel at something you're passionate about</li>
+                <li><strong>Social connections:</strong> Build a strong network of friends and mentors</li>
+                <li><strong>Financial stability:</strong> Handle your responsibilities like a man</li>
+                <li><strong>Mental health:</strong> Address your insecurities through growth, not control</li>
+                <li><strong>Purpose-driven life:</strong> Have goals bigger than any relationship</li>
+            </ul>
+        </div>
+
+        <div class="quote">
+            "When you know you're the prize, you don't need to convince anyone. You just show up and let your actions speak."
+        </div>
+
+        <div class="cta">
+            <h2>Ready to Develop Bulletproof Confidence?</h2>
+            <p>Stop letting insecurity control your actions. Learn the advanced strategies that turn you into the man others look up to.</p>
+            <button class="cta-button" onclick="scrollToTop()">Master Your Mindset</button>
+        </div>
+
+        <div class="section" style="background: linear-gradient(135deg, #dc2626 0%, #1f2937 100%); color: white; text-align: center; border-left: none;">
+            <h2 style="color: white;">Transform Your Confidence & Social Skills</h2>
+            <p style="font-size: 1.2rem; margin: 20px 0;">Join our comprehensive training program and learn the exact techniques to handle any social situation with unshakeable confidence.</p>
+            <div style="margin: 30px 0;">
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">🎯 Master bulletproof confidence in any situation<br>
+                💪 Learn to read people and social dynamics<br>
+                🔥 Develop magnetic presence that commands respect<br>
+                ⚡ Build authentic charisma that attracts quality people</p>
+            </div>
+            <a href="https://make-men-strong-again.circle.so/c/flirtondemand/" target="_blank" class="workshop-button">
+                🚀 JOIN THE CONFIDENCE MASTERY WORKSHOP
+            </a>
+            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.9;">Stop being the nice guy. Start being the respected man.</p>
+        </div>
+    </div>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Add fade-in animation for sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section, .quote');
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+
+            // Add click effects to principles
+            const principles = document.querySelectorAll('.principle');
+            principles.forEach(principle => {
+                principle.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1.05)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
